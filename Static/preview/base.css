@@ -1,0 +1,388 @@
+@charset "utf-8";
+body {
+    background: url("../images/body_bg_03.jpg") repeat scroll 0 0 transparent;
+    color: #333333;
+    font: 14px 宋体,Verdana,Arial,Helvetica,sans-serif;
+}
+.warp {
+    margin: 0 auto;
+    width: 960px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+i {
+    font-style: normal;
+}
+img {
+    border: 0 none;
+}
+a:link, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+a:hover {
+    color: #FF0000;
+    text-decoration: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul {
+    list-style: none outside none;
+}
+capation, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+q:before, q:after {
+    content: " ";
+}
+abbr, acronym {
+    border: 0 none;
+}
+.clear {
+    clear: both;
+    overflow: hidden;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    visibility: hidden;
+}
+.clearfix {
+}
+.pr {
+    position: relative;
+}
+.pa {
+    position: absolute;
+}
+.f12 {
+    font-size: 12px;
+}
+.f14 {
+    font-size: 14px;
+}
+.f16 {
+    font-size: 16px;
+}
+.f20 {
+    font-size: 20px;
+}
+.fb {
+    font-weight: bold;
+}
+.mt7 {
+    margin-top: 7px;
+}
+.blank7 {
+    clear: both;
+    font-size: 0;
+    height: 7px;
+    line-height: 0;
+    overflow: hidden;
+}
+.blank10 {
+    clear: both;
+    font-size: 0;
+    height: 10px;
+    line-height: 0;
+    overflow: hidden;
+}
+.mbr {
+    border-radius: 5px 5px 5px 5px;
+}
+.wbs {
+    box-shadow: 2px 3px 0 #74350E;
+}
+header {
+    padding-bottom: 5px;
+}
+.Logo a {
+    background: url("logo.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 77px;
+    margin: 10px 0 0 15px;
+    width: 240px;
+}
+.TopTel {
+    background: url("ind_img2.png") no-repeat scroll 0 -50px transparent;
+    height: 60px;
+    margin-top: 25px;
+    width: 170px;
+}
+.tSearch {
+    float: left;
+    padding: 25px 0 5px 115px;
+    width: 370px;
+}
+.tSearch .tab {
+    overflow: hidden;
+}
+.tSearch .tab li {
+    cursor: pointer;
+    float: left;
+    line-height: 22px;
+    padding-left: 12px;
+}
+.tSearch .tab li span {
+    color: #999999;
+    padding-right: 12px;
+}
+.tSearch .tab li.current span {
+    color: #F37800;
+    font-weight: bold;
+}
+.tSearch .form {
+    display: none;
+    padding-top: 2px;
+}
+.tSearch .form li {
+    float: left;
+    padding-right: 10px;
+}
+.tSearch .form .input input {
+    border: 1px solid #D4D4D4;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+    width: 228px;
+}
+.tSearch .form .but {
+    background: url("ind_img2.png") no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    width: 71px;
+}
+nav.clear {
+    clear: both;
+    overflow: hidden;
+}
+nav ul {
+    background: url("Nav_bg.png") repeat-x scroll 0 5px transparent;
+    height: 39px;
+}
+nav ul li {
+    float: left;
+    line-height: 31px;
+    text-align: center;
+    width: 106px;
+}
+nav ul li.bbs a i {
+    border: 0 none;
+}
+nav ul li:hover {
+    background: url("nav_current.png") no-repeat scroll 5px top transparent;
+    border: 0 none;
+}
+nav ul li:hover i {
+    border: 0 none;
+}
+nav ul li a i {
+    border-right: 1px solid #1657C3;
+    color: #FFFFFF;
+    display: block;
+    margin-top: 5px;
+}
+.back_top {
+    bottom: 20px;
+    font-size: 12px;
+    position: fixed;
+    right: 10px;
+    width: 58px;
+}
+.back_top .dh {
+    border: 1px solid #D8D8D8;
+}
+.back_top h2 {
+    background: linear-gradient(#FBFBFB, #EEEEEE) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #E8E8E8;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+}
+.back_top h2 i {
+    background: url("backtop.png") no-repeat scroll -7px -129px transparent;
+    cursor: pointer;
+    display: block;
+    padding-right: 3px;
+}
+.back_top h2.current i {
+    background-position: -7px -108px;
+}
+.back_top ul {
+    display: none;
+    padding: 5px 0;
+}
+.back_top ul li {
+    border-bottom: 1px dashed #E8E8E8;
+    line-height: 24px;
+    text-align: center;
+}
+.back_top a.top {
+    background: url("backtop.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 50px;
+    width: 58px;
+}
+.back_top a.top:hover {
+    background: url("backtop.png") no-repeat scroll 0 -50px transparent;
+    display: block;
+    height: 50px;
+    width: 58px;
+}
+#yuyue form {
+    padding-left: 15px;
+}
+#yuyue ul.form li {
+    height: 25px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+#yuyue ul.form li i {
+    color: #CC0000;
+}
+#yuyue ul.form li .inp {
+    border: 1px solid #EFE3C5;
+    height: 22px;
+}
+#yuyue ul.form li.button {
+    height: 33px;
+    padding-top: 0;
+}
+#yuyue ul.form li.button .but {
+    background: url("ind_img2.png") no-repeat scroll 0 -123px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    height: 34px;
+    margin: 0 auto;
+    width: 97px;
+}
+.pager {
+    clear: both;
+    overflow: hidden;
+    padding: 20px 0 10px;
+    text-align: center;
+}
+.pager a, .pager span {
+    border: 1px solid #E3E3E3;
+    color: #333333;
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    text-align: center;
+}
+.pager a:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+}
+.pager span {
+    background: none repeat scroll 0 0 #2769D6;
+    border: 1px solid #1C5BC4;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.help {
+    border-bottom: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.help ul {
+    float: left;
+    padding-left: 40px;
+    width: 200px;
+}
+.help ul li {
+    line-height: 28px;
+    padding-left: 33px;
+}
+.help ul li.tel {
+    color: #CC0000;
+    font: bold 16px/28px '微软雅黑';
+}
+.help ul li.t {
+    background: url("../images/help_ico.png") no-repeat scroll 0 0 transparent;
+    font-weight: bold;
+    padding-left: 30px;
+}
+.help ul.b li.t {
+    background-position: 0 -43px;
+}
+.help ul.c li.t {
+    background-position: 0 -88px;
+}
+.help ul.d li.t {
+    background-position: 0 -138px;
+}
+.link {
+    background: linear-gradient(#FAFAFA, #F0F0F0) repeat scroll 0 0 transparent;
+    border: 1px solid #DFDFDF;
+    height: 31px;
+    line-height: 31px;
+}
+.link h1 {
+    float: left;
+    text-align: center;
+    width: 85px;
+}
+.link .lc {
+    float: left;
+    padding: 5px 0;
+    width: 860px;
+}
+.link .lc li {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-size: 12px;
+    line-height: 21px;
+    padding: 0 8px;
+}
+footer {
+    border-top: 1px solid #E8E8E8;
+    font-size: 12px;
+    line-height: 23px;
+    padding: 12px 0;
+    text-align: center;
+}
+#teac_show_content .teac_info dt ul {
+    padding: 10px 15px;
+}
+ol, ul {
+    list-style: none outside none;
+}
+
+.Logo a {
+    background: url("logo.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 77px;
+    margin: 10px 0 0 15px;
+    width: 240px;
+}
+a:link, a:visited {
+    color: #333333;
+    text-decoration: none;
+}

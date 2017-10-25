@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/**初始化**/
+html,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,figure,figcaption,fieldset,legend,img { margin:0; padding:0; border:0 none;}
+h1,h2,h3{ font-weight:normal;}
+fieldset, img { border:none; }
+address, caption, cite, code, dfn, th, var ,i,samp{ font-style:normal; font-weight:normal; }
+ul,ol,li { list-style:none;}
+input {padding: 0px;box-sizing : content-box; -moz-box-sizing : content-box;-webkit-appearance: none;}
+select, input { vertical-align:middle; }
+select{-webkit-appearance:none; appearance:none;}
+select, input, textarea {margin:0;font-family:Helvetica,"Microsoft YaHei";-webkit-tap-highlight-color:rgba(255,255,255,0);  }
+input[type="text"], input[type="password"], textarea { outline-style:none; -webkit-appearance:none; }
+textarea { resize:none; }
+table {border-collapse:0;border-spacing:0 }
+td,th{padding:0}
+body { color:#222222;padding: 0; margin:0; font-size: 16px; border:0 none; font-family:Helvetica,"Microsoft YaHei","Arial Narrow"; background:#abe1fe;/* overflow-y:scroll;*/opacity: 1; position: relative; }
+a{ color: #fff; text-decoration: none;}
+.bold{ font-weight: bold;}
+.c-gray{ color: #999;}
+
+
+/**banner**/
+.banner{ width:100%; height: 451px; overflow: hidden; background: url(../images/banner_bg.png) no-repeat 50%;}
+.banner .banner_con{width: 1032px; height: 451px; margin:0 auto; background: url(../images/top_bg.png) no-repeat left top; position: relative;}
+.banner .banner_con span{ display: block; position: absolute; color: #fac612;font-weight: bold;-mo-text-shadow:2px 0 0  #763318,-2px 0 0  #763318,0 3px 0  #763318,0 -2px 0  #763318;-webkit-text-shadow:2px 0 0  #763318,-2px 0 0  #763318,0 3px 0  #763318,0 -2px 0  #763318; text-shadow:2px 0 0  #763318,-2px 0 0  #763318,0 3px 0  #763318,0 -2px 0  #763318;text-align:right;}
+.banner .banner_con .name{ font-size:65px; width: 240px;top:135px; left:316px;-webkit-transform: rotate(2deg); -moz-transform: rotate(2deg);transform: rotate(2deg); }
+.banner .banner_con .kemu{ font-size:65px; width: 300px;top:225px; left:150px;-webkit-transform: rotate(1deg); -moz-transform: rotate(1deg);transform: rotate(1deg); }
+.banner .banner_con .time{ font-size: 40px; width: 270px; top:350px; right:140px; letter-spacing:2px;}
+
+/**contain**/
+.conbg{ width: 100%; padding-bottom: 278px; background: url(../images/footer_bg.png) no-repeat center bottom,url("../images/con_bg.png") no-repeat center top; overflow: hidden;}
+.contain{ width: 1030px; border-radius: 4px; border:1px solid #ddd; background-color: #fff;  margin:0 auto;  }
+.contain .b-blue{ width: 1030px; height: 40px; background-color: #f3f8ff;border-radius: 4px 4px 0 0; }
+.contain .b-sblue{ width: 1030px; height: 8px; background: #518df1;border-radius: 0 0 4px 4px;margin-top: 120px;}
+
+.contain .con{width: 960px; margin-left: 35px; margin-top: 50px;}
+.po1{ background-position: 0 0;} 
+.po2{ background-position: 0 -40px;}
+.po3{ background-position: 0 -80px;} 
+.contain .con .title{ width: 920px; height: 32px; line-height: 32px; padding-left: 40px; background-image: url(../images/icon_2.png); background-repeat:  no-repeat; font-size: 20px; color:#518df1;}
+.contain .con .info{ width: 920px; padding-left: 40px; margin-top: 20px; line-height: 40px;}
+.contain .con .info span{padding:0 22px; border-bottom: 1px solid #222;color:#518df1;}
+.contain .con .txt{ width: 880px; font-size: 16px; margin-left: 40px; height: 150px; padding-top: 10px; padding-left: 8px; border-radius: 4px; border:1px solid #ddd;margin-top: 20px;  }
+
+.class{ width: 886px; background-color: #fafafa;margin-left: 40px; border-radius: 4px; margin-top: 20px;}
+.class .classtitle{ width: 886px; height: 44px; padding: 20px 0; background-color: #f5f5f5; border-radius:4px 4px 0 0; line-height: 44px;}
+.class .classtitle .classnum{ width: 220px; height: 44px; font-weight: bold; margin-left: 50px; background: url(../images/icon_2.png) no-repeat 0 -170px; padding-left: 36px; float: left; font-size: 18px;}
+.class .classtitle .classnum .num{ display: inline-block; width: 40px; height: 40px; color: #518df1; text-align: center; border-radius: 4px; border:2px solid #518df1; background-color: #fff; margin:0 10px; font-size: 20px;}
+.class .classtitle p{ width: 400px; float: left;}
+.class .classtitle .medal{ display:inline-block; width: 100px; height: 44px; background-position: no-repeat; vertical-align: middle;}
+.class .classtitle .adr1{background-position: 0 8px;}
+.class .classtitle .adr2{background-position: 0 -72px;}
+.class .classtitle .adr3{background-position: 0 -152px;}
+.class .classtitle .adr4{background-position: 0 -232px;}
+.class .classtitle .del{ display: block; width: 40px ;height:24px; line-height: 24px; float: left; padding: 10px 20px; border-radius: 4px;  background: #f55075 url(../images/icon_2.png) no-repeat 20px -288px; padding-left: 44px; margin-left: 46px;}
+
+.classcon{ width: 830px; padding: 20px 28px;}
+.classcon p{ width: 830px;}
+.classcon p span{display: inline-block; width: 728px; line-height: 44px;}
+.classcon p label{ display: block; width: 66px; height: 44px; text-align: right; padding-right: 24px; float: left; line-height: 44px;}
+.classcon p .tet{ width: 730px; padding-left: 8px; height: 44px; border:0 none; border:1px solid #ddd; font-size: 16px; border-radius: 4px;}
+.classcon p .area{ width:728px;padding-left: 8px; padding-top: 10px; height: 154px; border-radius: 4px;border:0 none;border:1px solid #ddd; font-size: 16px; }
+
+.contain .add{ width: 886px; height: 75px; line-height: 75px; margin: 32px 75px; border:1px dashed #518df1; border-radius: 4px; color: #518df1; text-align: center; cursor: pointer;}
+.contain .report{ display: block; width: 248px; height: 66px; line-height: 66px;  text-align: center;  background: #518df1;margin: 0 auto; margin-top: 77px; border-radius: 4px;}
+
+.yun1{ width:351px; height: 283px; position: absolute;top:1212px; left: 50%;margin-left: -866px; background: url(../images/img1.png) no-repeat left top; }
+.feiji{ width:237px; height: 252px; position: absolute;top:1212px; left: 50%;margin-left: 515px; background: url(../images/img2.png) no-repeat left top; }
+.yun2{ width:172px; height: 150px; position: absolute;top:1878px; left: 50%;margin-left: 515px; background: url(../images/img3.png) no-repeat left top; }
+

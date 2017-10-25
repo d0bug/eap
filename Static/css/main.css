@@ -1,0 +1,36 @@
+@charset"utf-8";
+/* Reset */
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+input,select,textarea,button,table{font-size:12px;font-family:'微软雅黑',Tahoma,宋体}
+table{border-collapse:collapse}
+em{font-style:normal}ul,ol{list-style:none}img{border:none;vertical-align:middle}
+/* Public */
+body{font:14px/1.5 '微软雅黑',Verdana,宋体;color:#333;background-color:#FFF}
+a{color:#333;text-decoration:none}a:hover{color:#f16e2b;text-decoration:underline}
+.clear{clear:both;line-height:0;font-size:0;visibility:hidden}
+.clearfix:after{content:"";display:table;clear:both}.clearfix{*zoom:1}
+
+
+.sysCaption {float: left; line-height: 75px; padding-left: 10px; margin-right: 20px; color:#F16E2B;}
+.sysNav {float: left; padding-top: 10px;}
+.sysNav li {float: left; text-align: center; padding: 0 12px;}
+.sysUser {float: right; line-height: 75px; padding-right: 12px;}
+.sysUser .u {color: #f16e2b;}
+
+.sideMenu {border-right: 1px solid #D3D3D3; display: none;}
+.sideMenu .menuPanel {height: 27px; overflow: hidden;}
+.sideMenu .menuTitle {height: 16px; width: 183px; padding: 5px; cursor: pointer; position: relative; border: 1px solid #D3D3D3; border-width: 0 0 1px; background:linear-gradient(to bottom, #F8F8F8 0px, #EEEEEE 100%);}
+.sideMenu .menuTitle .title {color: #575765; font-sze: 12px; font-weight: bold; height: 16px; line-height: 16px; background: url(/static/easyui/themes/gray/images/blank.gif) no-repeat;}
+.sideMenu .selected {height: auto;}
+.sideMenu .selected .menuTitle {background: #0092DC;}
+.sideMenu .selected .menuTitle .title {color: #FFF;}
+.sideMenu .tool {height: 16px; margin-top: -8px;overflow: hidden;position: absolute;top: 50%;right:5px;width:auto;}
+.sideMenu .tool a {display: inline-block;height: 16px;margin: 0 0 0 2px;opacity: 0.6;vertical-align: top;width: 16px;background: url(/static/easyui/themes/gray/images/accordion_arrows.png) no-repeat -16px 0;}
+.sideMenu .selected .tool a {background-position: 0 0;}
+.sideMenu .menuList li {border-bottom: 1px solid #DDD;}
+.sideMenu .menuList li img {display: none;}
+.sideMenu .menuList li a {display: block; padding: 5px 0 5px 35px; background: url(/static/images/menuIco.png) no-repeat 15px 50%;}
+
+
+#Vip-VipPermission-userManage iframe{overflow-y:auto;}
+#Vip-VipPermission-userManage { overflow-y:scroll;-webkit-overflow-scrolling:touch;}

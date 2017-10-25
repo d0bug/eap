@@ -1,0 +1,49 @@
+@charset"utf-8";
+
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; } 
+.header .arr1 {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	border-width: 6px;
+	border-style: solid;
+	border-color:transparent transparent #f3f3f3 transparent;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -6px;
+}
+
+
+
+/***查询****/
+.search{ width: 98%; padding: 14px 1%; height: 37px; background-color: #f3f3f3;  border-bottom: 1px solid #e9e9e9;}
+.search .stuname{ width: 74%;  height: 37px;box-sizing:border-box; display:block; float: left; border:0 none; border-top:1px solid #579d38;border-left:1px solid #579d38;border-right:1px solid #579d38;border-bottom:2px solid #467a2b;  font-size: .875rem;background: #fff url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSLlm77lsYJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgd2lkdGg9IjMycHgiIGhlaWdodD0iMThweCIgdmlld0JveD0iMCAwIDY0IDM2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2NCAzNiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiM1MTUxNTEiIGQ9Ik01Mi4wMjYsMzMuMTAzbC03LjQ3NS03LjQ3NWMxLjkyOC0yLjMyNywzLjA5Mi01LjMxMywzLjA5Mi04LjU3MQoJCWMwLTcuNDMxLTYuMDI2LTEzLjQ1NS0xMy40NTUtMTMuNDU1Yy03LjQzMiwwLTEzLjQ1NSw2LjAyNC0xMy40NTUsMTMuNDU1YzAsNy40Myw2LjAyMywxMy40NTIsMTMuNDU1LDEzLjQ1MgoJCWMzLjIwNSwwLDYuMTQ5LTEuMTIzLDguNDU5LTIuOTk1bDUuNTY1LDUuNTI3bDAuMDA0LTAuMDAzbDEuOTM2LDEuOTM2YzAuNTIsMC41MTgsMS4zNTcsMC41MTgsMS44NzQsMAoJCUM1Mi41NDMsMzQuNDU5LDUyLjU0MywzMy42MTksNTIuMDI2LDMzLjEwM0w1Mi4wMjYsMzMuMTAzeiBNMzQuMTg4LDI3Ljg3NWMtNS45NzYsMC0xMC44Mi00Ljg0NS0xMC44Mi0xMC44MTgKCQljMC01Ljk3Niw0Ljg0NC0xMC44MiwxMC44Mi0xMC44MmM1Ljk3NCwwLDEwLjgxOSw0Ljg0NSwxMC44MTksMTAuODJDNDUuMDA4LDIzLjAzLDQwLjE2MiwyNy44NzUsMzQuMTg4LDI3Ljg3NUwzNC4xODgsMjcuODc1eiIvPgo8L2c+Cjwvc3ZnPg==") no-repeat left center; padding-left:9% }
+input::-webkit-input-placeholder{color:#515151;}
+input:-moz-placeholder{color:#515151;}
+.search .btn-org{ width: 24%; height: 37px; box-sizing:border-box; display:block; float: left; margin-left: 2%; border:0 none; background-color: #ff8549;border-bottom:2px solid #ce6b3c; color:#fff; border-radius: 4px;font-size: .875rem;}
+/****学员课时***/
+.claList .hd{padding: 15px 0 0 0;
+	line-height: 30px;
+	height: 30px;
+	color: #66B840;
+	border-bottom: 2px solid #66B840;
+}
+.claList .hd .th {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+.claList .tr {
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #DDD;
+	font-size: .875rem;
+	position: relative;
+
+}
+.claList .tr .td {
+	float: left;
+	width: 25%;
+	text-align: center;
+}

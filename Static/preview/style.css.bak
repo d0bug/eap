@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("base.css");
+/*公用*/
+.leftCon { width:728px}
+.w210 { width:210px}
+.w710 { width:710px;min-height:767px;overflow:hidden; border-right:1px solid #dcdcdc;padding-right:14px}
+.w235 { width:235px}
+.Sidebox { width:225px; float:right; overflow:hidden}
+.mainCon { width:510px; float:left;padding-left:8px; overflow:hidden}
+.ad { font-size:0; line-height:0}
+
+.submenu { border-bottom:2px solid #ddd; line-height:32px; height:32px}
+.submenu h1 { float:left; background:url(ind_img2.png) no-repeat 10px -390px; border-bottom:2px solid #2e73e8; margin-bottom:-2px; padding:0 12px 0 30px; font-size:16px}
+.submenu .wz { float:right; font-size:12px; padding-right:10px}
+.submenu .wz,.submenu .wz a { color:#b2b2b2}
+
+.box .tit { background:-moz-linear-gradient(#FFF, #f7f7f7);background:-webkit-linear-gradient(#FFF, #f7f7f7);background:linear-gradient(#FFF, #f7f7f7);-pie-background:linear-gradient(#FFF, #f7f7f7); border:1px solid #ededed; border-bottom:2px solid #2e74e8;height:28px; overflow:hidden; zoom:1;}
+.box .tit h1 { background:url(ind_img2.png) no-repeat 12px -218px; padding-left:25px; line-height:28px; font-weight:bold}
+.box .con { padding:10px 0 8px 10px; border:1px solid #e8e8e8; overflow:hidden}
+
+.mainModule .caption { background:url(ind_caption_bg.png) repeat-x 0 -1px; height:37px; line-height:35px; border:1px solid #d8d8d8; border-bottom: none; overflow:hidden}
+.mainModule .caption h1 { float:left; border-bottom:2px solid #2e73e8; background:url(ind_img2.png) no-repeat 10px -390px; padding:0 10px 0 33px; font:bold 16px/35px '微软雅黑'}
+.mainModule .caption .more { float:right; padding-right:10px; color:#8b8b8b}
+.mainModule .caption .more a { color:#8b8b8b}
+.mainModule .content { padding-top:12px; overflow:hidden}
+.mainModule .mod .tit { border-bottom:1px solid #ececeb; line-height:28px; overflow:hidden;zoom:1}
+.mainModule .mod .tit h2 { background: url(ind_img2.png) no-repeat 7px -220px; padding-left:25px; float:left}
+.mainModule .mod .tit a.m { float:right; color:#8e8e8e; font-size:12px}
+.newsList { padding:10px 0 7px 10px}
+.newsList li {height:26px; line-height:26px; background:url(dot.png) no-repeat center left; padding-left:12px; overflow:hidden;zoom:1}
+.sub_Content { padding:20px 12px}
+
+
+
+/*教师列表页*/
+.teac_tishi { overflow:hidden; padding-bottom:10px;zoom:1}
+.teac_tishi dt { background: url(list_ico.png) no-repeat 0 -133px; width:65px; height:62px; float:left}
+.teac_tishi dd { float:left; background:#fff8e8; border:1px solid #e0cebd; border-left:0; height:59px;-webkit-box-shadow: 0px 5px 0px  #ccc;-moz-box-shadow: 0px 0px 5px #ccc;box-shadow: 0px 1px 3px #ccc;-moz-border-radius:0 5px 5px 0;-webkit-border-radius:0 5px 5px 0; width:890px;border-radius:0 5px 5px 0}
+.teac_tishi dd p { padding:8px 0 0 20px; line-height:21px}
+.teac_tishi dd p strong { color:#d53131}
+
+	/**/
+	.teac_r { border-left:1px solid #dcdcdc; border-right:0;padding-right:0;padding-left: 14px}
+	#list_Sidebox.teac_side .mod {padding-right:15px; padding-bottom:7px; padding-left:0}
+	
+	.tcac_class .title { background:#2e74e8; font:bold 16px/37px '微软雅黑','黑体'; color:#fff; text-align:center;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0}
+	.tcac_class ul.class_con{ background:#fefcee; border:1px solid #e4d4b5; border-top:0; padding:10px 0}
+	.tcac_class ul.class_con li {cursor:pointer; color:#d1783d; border-bottom:1px dashed #eae2cc;zoom:1;height:31px;vertical-align:top; line-height:31px; }
+	.tcac_class ul.class_con li.current { position:relative; z-index:9999; border-bottom:0; height:32px;}
+	.tcac_class ul.class_con li.current h3 { border:2px solid #f0c449;background-position: 68px -206px;  border-right:0; height:26px; line-height:26px; font-weight:bold; position:absolute; left:0; top:-1px; width:100px; z-index:9; background-color:#fdfdf4}
+	.tcac_class ul.class_con li h3 { background-image: url(list_ico.png) ; background-position: 68px -206px; font-size:12px; padding-left:85px;line-height:28px; }
+	.tcac_class ul.class_con li.current ul.box { display:block}
+	.tcac_class ul.class_con li ul.box { background:#fdfdf4; position:absolute; width:150px; left:185px; top:-10px;display:none;  border:2px solid #f0c449; z-index:8; padding:5px 0 10px 0}
+	.tcac_class ul.class_con li ul.box li { border-left:0; border-bottom:1px dashed #eae2cc; text-align:center; line-height:28px}
+	.tcac_class ul.class_con li ul.box li a {color:#926816; display:block}
+	.tcac_class ul.class_con li ul.box li a:hover { background:#fff;font-weight:bold}
+	.tcac_class ul.class_con li.cz {  background:#f1fef0}
+	.tcac_class ul.class_con li.cz  { color:#438037}
+	.tcac_class ul.class_con li.gz  { color:#336dcc}
+	.list_shilu .con {line-height:26px}
+	.teac_side .mod h2 { border-bottom:1px solid #dcdcdc; padding:10px }
+	.teac_side .mod .con { padding-top:10px}
+	#teac_list { overflow:hidden; padding:0}
+	#teac_list dl { width:350px; height:230px;overflow:hidden; float:left; padding-bottom:15px}
+	#teac_list dl dt { float:left; width:185px; line-height:0;}
+	#teac_list dl dt .pic { border:1px solid #e3e3e3;text-align:center}
+	#teac_list dl dt img { padding:1px;}
+	#teac_list dl dt a.bm { background:url(ind_img2.png) no-repeat 0 -430px; width:81px; height:25px; display: block; margin:10px auto}
+	#teac_list dl dd { width:155px; float:left; line-height:23px; padding-left:8px; font-size:12px}
+	#teac_list dl dd i { font-weight:bold}
+	#teac_list dl dd i.t { color:#d63b3b; font-size:14px}
+	
+/*老师介绍页*/
+#teac_show_content .teac_info { overflow:hidden; padding:20px 0;zoom:1}
+#teac_show_content .teac_info dt { background:url(teac_info_bg.png) no-repeat; width:500px; height:205px; float:left}
+#teac_show_content .teac_info dt ul { padding:10px 15px;}
+#teac_show_content .teac_info ul li { line-height:22px; border-bottom:1px dashed #cdcdcd; font-size:14px; padding:8px 0 8px 10px}
+#teac_show_content .teac_info ul li .p_l { padding-left:75px}
+#teac_show_content .teac_info dt .but { padding:0 25px}
+#teac_show_content .teac_info dt a.zx { background: url(teac_show_img.png) no-repeat 0 -60px; width:108px; height:32px; display:block; float:left;}
+#teac_show_content .teac_info dt a.sc { background:url(teac_show_img.png) no-repeat 0 -95px; line-height:24px; padding-left:20px; font-size:12px; margin-top:4px; font-weight:bold; color:#e81106; float:right; text-decoration:underline}
+#teac_show_content .teac_info dd { float:right; text-align:center; width:202px;border:1px solid #ccc}
+
+#teac_show_content dl.con { overflow:hidden; padding:15px 0; border-top:1px solid #dcdcdc;zoom:1}
+#teac_show_content dl.con dt { width:195px; line-height:0}
+#teac_show_content dl.con dd { width:505px;}
+#teac_show_content dl.con dd h2 { background: url(teac_show_img.png) no-repeat -115px -62px; border-bottom:1px dashed #dcdcdc; padding:5px 0 7px 28px}
+#teac_show_content dl.con dd .bd { line-height:30px; padding-top:8px; text-indent:2em}
+#teac_show_content dl.con dd.w { width:100%}
+
+.teac_show_mblc { background:url(teac_show_img.png) no-repeat right top; }
+.teac_show_mblc a {height:52px; display:block}
+#list_Sidebox .teac_show_qita { overflow:hidden}
+#list_Sidebox .teac_show_qita li {width:95px;height:175px; float:left; line-height:20px; text-align:center; font-size:12px; padding:0 12px 8px 3px}
+#list_Sidebox .teac_show_qita img,
+#list_Sidebox .teac_show_qita b { display:block}
+#list_Sidebox .list_yuyue .tel {background: url("list_yy_tel.png") no-repeat scroll center center transparent; height: 65px;}
+#list_Sidebox .list_yuyue { background: none repeat scroll 0 0 #F7F7F7; margin: 15px 0 0 10px;padding: 10px 0 0 5px;}
+#list_Sidebox .mod { padding-left: 15px;
+.w235 {
+    width: 235px;
+}
+.right {
+    float: right;
+}}
+
+

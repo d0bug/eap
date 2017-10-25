@@ -1,0 +1,8 @@
+/* the css sheet of 670*/
+
+h12{ font-size:12px; font-weight:700; color:#0E2D5F; padding-left:6px; padding-bottom:5px;}
+
+/*table*/
+.gs_table{ width:100%; border-collapse:collapse; border:0px;}
+.gs_table td{ border:#D3D3D3 solid 1px;}
+.gs_table th{ border:#D3D3D3 solid 1px;}

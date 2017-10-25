@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>高思教育1对1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="keywords" name="一对一家教,一对一辅导,小学辅导,中考辅导,高考辅导,高思一对一,高思教育">
+    <meta name="description" content="高思教育1对1高端品牌，一对一家教，提供小学辅导、中考辅导、高考辅导，数学、语文、英语、物理、化学等一对一课程，满足学生一对一辅导需求，个性化辅导!">
+    <link rel="stylesheet" type="text/css" href="/static/css/base_wx.css">
+    <script src="/static/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/static/js/jweixin.js" type="text/javascript"></script>
+    <script src='/static/js/swipe.js' type="text/javascript"></script>
+    <script src="/static/js/underscore.js" type="text/javascript"></script>
+    <script src="/static/js/pinchzoom.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="baogao_name">{student_name}的学习报告</div>
+<div class="baogao_img">
+    <div class="scroll">
+        <div class="scroll_box" id="scroll_img">
+            <ul class="scroll_wrap">
+            {report_img_list}       
+            </ul>
+        </div>
+        <ul class="scroll_position" id='scroll_position'>
+            {report_img_title}
+        </ul>
+    </div>
+    
+</div>
+
+<div class="baogao_conbox">
+    <div class="baogao_imgbg"></div>
+    <div class="baogao_contain">
+        <div class="baogao_title"><span class="wenbg add"><i class="yinc">课节信息</i></span></div>
+        <div class="neirong">
+            <p class="neirong_lh"><span class="c-blue">课次主题：</span>{lesson_topic}</p>
+            <p class="neirong_lh"><span class="c-blue">上课时间：</span>{lesson_time}</p>
+            <p class="neirong_lh"><span class="c-blue">授课教师：</span>{teacher_name}</p>
+            <p class="neirong_lh"><span class="c-blue">班 主 任：</span>{classadviser_name}</p>
+            <p class="neirong_lh"><span class="c-blue">科    目：</span>{kecheng_name}</p>
+            <p class="neirong_lh"><span class="c-blue">课    次：</span>第{lesson_no}次</p>
+        </div>
+    </div>
+
+    <div class="baogao_contain">
+        <div class="baogao_title"><span class="wenbg add1"><i class="yinc">课节评价</i></span></div>
+        <div class="pingjia">
+            <div class="pingjia_title"><span class="pjicon"></span>评价</div>
+            <ul class="reviews">
+                {dimension_level}
+            </ul>
+        </div>
+        <div class="pingjia mt20">
+            <div class="pingjia_title"><span class="pjicon"></span>老师说</div>
+            <div class="teachsay">
+                <p class="neirong_lh">
+                    {comment}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="baogao_contain">
+        <div class="baogao_title"><span class="wenbg add2"><i class="yinc">本节知识点</i></span></div>
+        <div class="neirong">
+            {knowledge_list}
+        </div>  
+    </div>
+
+</div>
+
+<div class="baogao_footer">
+    <img src="/static/images/baogao_footerimg.png">
+</div>
+
+
+
+<script>
+
+	var currentUrl = window.location.href;
+	$.post(jsInfoUrl,{currentUrl:currentUrl}, function(data){
+		if(data.errorMsg) {
+			//alert(data.errorMsg);
+			alert('微信接口验证失败，请稍后再试');
+		} else {
+			wx.config({
+					debug:false,
+					appId:data.appId,
+					timestamp:data.timestamp,
+					nonceStr:data.nonceStr,
+					signature:data.signature,
+					jsApiList:[
+					'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ'
+					]
+			})
+		}
+	}, 'json');
+
+	wx.ready(function () {
+		wx.checkJsApi({
+			jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+			success: function(res) {
+				// 以键值对的形式返回，可用的api值true，不可用为false
+				// 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+			}
+		});
+
+
+		//分享到朋友圈
+		wx.onMenuShareTimeline({
+			title: 'share_title', // 分享标题
+			link: currentUrl, // 分享链接
+			imgUrl: 'http://www.gaosivip.com/vipstatics/images/vip.png',
+			trigger: function (res) {
+				// 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+				//alert('用户点击分享到朋友圈');
+			},
+			success: function (res) {
+				//alert('已分享');
+			},
+			cancel: function (res) {
+				//alert('已取消');
+			},
+			fail: function (res) {
+				alert(JSON.stringify(res));
+			}
+		});
+
+
+
+
+		//分享给朋友
+		wx.onMenuShareAppMessage({
+			title: 'share_title', // 分享标题
+			desc: 'share_desc', // 分享描述
+			link: currentUrl, // 分享链接
+			imgUrl: 'http://www.gaosivip.com/vipstatics/images/vip.png',
+			trigger: function (res) {
+				// 不要尝试在trigger中使用ajax异步请求修改本次分享的内容，因为客户端分享操作是一个同步操作，这时候使用ajax的回包会还没有返回
+				//alert('用户点击发送给朋友');
+			},
+			success: function (res) {
+				//alert('已分享');
+			},
+			cancel: function (res) {
+				//alert('已取消');
+			},
+			fail: function (res) {
+				alert(JSON.stringify(res));
+			}
+		});
+
+
+
+		//分享到QQ
+		wx.onMenuShareQQ({
+			title: 'share_title', // 分享标题
+			desc: 'share_desc', // 分享描述
+			link: currentUrl, // 分享链接
+			imgUrl: 'http://www.gaosivip.com/vipstatics/images/vip.png',
+			trigger: function (res) {
+				//alert('用户点击分享到QQ');
+			},
+			complete: function (res) {
+				//alert(JSON.stringify(res));
+			},
+			success: function (res) {
+				//alert('已分享');
+			},
+			cancel: function (res) {
+				//alert('已取消');
+			},
+			fail: function (res) {
+				alert(JSON.stringify(res));
+			}
+		});
+	
+
+	});
+
+
+
+
+var slider =Swipe(document.getElementById('scroll_img'), {
+    auto: 3000,
+    continuous: true,
+    callback: function(pos) {
+      var i = bullets.length;
+      while (i--) {
+        bullets[i].className = ' ';
+      }
+      bullets[pos].className = 'on';
+
+    }
+  });
+var bullets = document.getElementById('scroll_position').getElementsByTagName('li');
+
+
+var J_connav_li=$("#J_connav li, #J_connavCopy li");
+J_connav_li.click(function(){
+	var n=$(this).index();
+	var conbox=$(".baogao-navcon");
+	J_connav_li.removeClass("on");
+	$(this).addClass("on");
+	conbox.addClass("hide");
+	conbox.eq(n).removeClass("hide");
+})
+
+
+$(window).scroll( function() {
+	var navHeight=$("#J_navHeight").offset().top;
+	if($(window).scrollTop()>navHeight){
+		$("#J_connav").addClass("baogao-nav-fixed fixed");
+		$("#J_connavCopy").css({"display":"block","height":"50px"})
+	}else{
+		$("#J_connav").removeClass("baogao-nav-fixed fixed");
+		$("#J_connavCopy").css({"display":"none","height":"0px"})
+	}
+});
+
+
+function goto(){
+	window.android.toCuotishubao();
+}
+
+</script>
+
+
+</body>
+</html>

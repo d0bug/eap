@@ -1,0 +1,89 @@
+<?php 
+return array(
+'DEFAULT_CONN'  => 'MYSQL_CONN_VIPSCHOOL',
+'PAGESIZE'=>'20',
+'PREFIX_STUDYCARD'=>'GSXXK',
+'PREFIX_RECHARGECARD'=>'GSCZ',
+'COURSE_TYPE_CONF'=>array(
+		'1'=>array(
+			'grade'=>'小学',
+			'subject'=>'数学',
+			'course_type'=>22
+		),
+		'2'=>array(
+			'grade'=>'小学',
+			'subject'=>'语文',
+			'course_type'=>14
+		),
+		'3'=>array(
+			'grade'=>'小学',
+			'subject'=>'英语',
+			'course_type'=>23
+		),
+		'4'=>array(
+			'grade'=>'初中',
+			'subject'=>'数学',
+			'course_type'=>1
+		),
+		'5'=>array(
+			'grade'=>'初中',
+			'subject'=>'语文',
+			'course_type'=>5
+		),
+		'6'=>array(
+			'grade'=>'初中',
+			'subject'=>'英语',
+			'course_type'=>24
+		),
+		'7'=>array(
+			'grade'=>'初中',
+			'subject'=>'物理',
+			'course_type'=>4
+		),
+		'8'=>array(
+			'grade'=>'初中',
+			'subject'=>'化学',
+			'course_type'=>3
+		),
+	
+		'9'=>array(
+			'grade'=>'高中',
+			'subject'=>'数学',
+			'course_type'=>28
+		),
+		'10'=>array(
+			'grade'=>'高中',
+			'subject'=>'语文',
+			'course_type'=>15
+		),
+		
+		'11'=>array(
+			'grade'=>'高中',
+			'subject'=>'英语',
+			'course_type'=>12
+		),
+		'12'=>array(
+			'grade'=>'高中',
+			'subject'=>'物理',
+			'course_type'=>10
+		),
+		'13'=>array(
+			'grade'=>'高中',
+			'subject'=>'化学',
+			'course_type'=>13
+		)
+	),
+	//阿里云存储配置
+		'OSS_ACCESS_ID'=>'Jc7kCBArGDfPKIEC',
+		'OSS_ACCESS_KEY'=>'DTu0BUWAzRdTEgrsTGJwldUmgUGIEs',
+		'DEFAULT_OSS_HOST'=>'oss-cn-beijing.aliyuncs.com',
+		'DEFAULT_OSS_HOST_SHOW'=>'video.gaosiedu.com',
+		'OSS_video_PATH'=>'upload/video/',
+		'OSS_IMG_PATH'=>'upload/image/',
+		'BUCKET'=>'gaosischool',
+		
+		
+	'default_avatar'=>'http://oss-cn-beijing.aliyuncs.com/gaosischool/upload/image/head.jpg',
+	'DEFAULT_SUBJECT'=>array('语文','数学','英语','物理','化学','生物','地理','历史','政治')
+);
+?>

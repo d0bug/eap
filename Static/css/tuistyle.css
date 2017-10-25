@@ -1,0 +1,50 @@
+body{
+  background-color: #2dbfc0;
+}
+.m-header{
+  height: .96rem;
+  /*width: 100%;*/
+  background-color: #2ecc71;
+  padding: 0 .32rem 0 .32rem;
+  position: relative;
+}
+
+.m-header .icon-callback{
+  display: inline-block;
+  width: .34rem;
+  height: .27rem;
+  background: url('/static/images/tuijianmaicon-left.svg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:40%;
+  cursor: pointer;
+}
+
+.m-header .title{
+  width: 100%;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: .36rem;
+  line-height: .96rem;
+}
+
+.m-con{
+  /*width: 100%;*/
+  height: 10.44rem;
+  background:url('/static/images/tuijianmabg.jpg') no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+
+.m-con .s-code{
+  color: #2ecc71;
+  font-size: 0.56rem;
+  font-weight: 700;
+  position: absolute;
+  top: 4.75rem;
+  left: .82rem;
+
+}

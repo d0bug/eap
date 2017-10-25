@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>JMEditor</title>
+<script type="text/javascript" src="../extra/jquery-1.8.3.min.js"></script>
+<link href="dialog.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function setHtml(editor) {
+	var mathHTML = '<span class="mathquill-rendered-math" style="font-size:15px;" >' + jQuery("#jme-math").html() + '</span><span>&nbsp;</span>';
+	mathHTML = mathHTML.replace(/<span[^>]*>[^<]*<textarea>[^<]*<\/textarea>[^<]*<\/span>/ig, '');
+	editor.insertHtml(mathHTML);
+}
+</script>
+</head>
+<body>
+<div class="tabMenu">
+	<div class="tabTitle">
+		<li>
+			常用公式
+		</li>
+		<li>
+			字母
+		</li>
+		<li>
+			符号
+		</li>
+	</div>
+	<div class="tabContent">
+		<div class="mathBox">
+		</div>
+		<div class="mathBox">
+		</div>
+		<div class="mathBox">
+		</div>
+	</div>
+</div>
+<div id="mathDiv">
+	<p>
+		<span id="jme-math"></span>
+	</p>
+	<p>&nbsp;</p>
+</div>
+<div style="clear:both">&nbsp;</div>
+<br /><br /><br /><br /><br /><br />
+<script type="text/javascript" src="dialog.js"></script>
+</body>
+</html>

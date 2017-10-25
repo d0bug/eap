@@ -1,0 +1,539 @@
+@charset "utf-8";
+/* Reset */
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,form,fieldset,legend,input,textarea,select,article,aside,dialog,footer,header,section,footer,nav,figure,hgroup,menu{margin:0;padding:0;}
+table,h1,h2,h3,h4,h5,h6{font-size:1rem;}
+table{border-collapse:collapse;}
+em{font-style:normal;}ul,ol{list-style:none;}
+img{border:none;vertical-align:middle;}
+body{font:1rem/1.5 'Microsoft YaHei','微软雅黑',Consolas,Arial;background-color:#FFF;color:#515151;}
+a{color:#333;text-decoration:none;}
+.clear{clear:both;line-height:0;font-size:0;visibility:hidden;}
+.clearfix:after{content:"";display:table;clear:both;}
+.cOrange, a.cOrange{color:#FF8546;}
+
+body {background-color: #FFF;}
+input[type=text], select, textarea {width: 98%; background-color: #FFF; padding-left:5px; border: 1px solid #DADADA; border-radius: 5px; box-shadow: 0 1px 2px #DDD inset;}
+input, select {height: 30px;}
+select {-webkit-appearance:none; appearance:none; line-height: 30px;}
+.selbar {position: relative; display: block;}
+.selbar::before, .selbar::after {
+	position: absolute;
+	right: 18px;
+	top: 50%;
+	content: "";
+	font-size: 0;
+	height: 0;
+	width: 0;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #CCC transparent transparent transparent;
+}
+.selbar::after {margin-top: -2px;border-color: #FFF transparent transparent transparent;}
+
+.btn {
+	background-color: #66B840;
+	color: #FFF;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 5px;
+	display: inline-block;
+	border: 0;
+	border-bottom: 2px solid #467A2B;
+	font-size:1rem;
+}
+#popBg {
+	background-color: #000;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: .5;
+	z-index: 999;
+	display: none;
+}
+#popWindow {
+	position: fixed;
+	top: 40%;
+	left: 0;
+	width: 88%;
+	margin: -100px 6% 0;
+	z-index: 1000;
+	background-color: #FFF;
+	border-radius: 10px;
+	box-shadow: 0 0 10px #666;
+	display: none;
+}
+#popWindow .popHd {
+	color: #66B840;
+	text-align: center;
+	font-size: 1.125rem;
+	border-bottom: 1px solid #DDD;
+	padding: 0 0 10px;
+}
+.modTab {height: 41px;}
+.modTab li {
+	width: 50%;
+	float: left;
+	border-bottom:1px solid #DDD;
+	text-align: center;
+	position: relative;
+}
+.modTab li a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding-top: 10px;
+}
+.modTab li.current {border-bottom: 3px solid #66B840; margin-bottom: -2px}
+.modTab li.current a {color: #66B840;}
+.modTab li i {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 30px;
+	width: 1px;
+	background-image: -webkit-linear-gradient(top, #FFF, #66B840);
+	background-image: linear-gradient(to bottom, #FFF, #66B840);
+	background-color: #66B840;
+	display: none;
+}
+.modTab li:last-of-type i {left: 0; right: auto;}
+.modTab li.current i {display: block;}
+
+.modTit {
+	padding: 15px 15px 0;
+	border-bottom: 1px solid #DDD;
+	color: #66B840;
+	font-size: 1rem;
+	line-height: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.modTit em {font-weight: normal;font-size: .715rem;}
+.modCon {padding: 10px 15px 0;font-size: .875rem;}
+.modInfo {padding-left: 80px;line-height: 1.8em;}
+.modInfo dt {float: left;margin-left: -80px;}
+.modInfo dd {min-height: 1.8em;}
+.modInfo a {color: #05A;border-bottom: 1px dotted #05A;}
+
+/************************************************************************** 头图 ***/
+.header {
+	height: 80px;
+	background: url(../img/header.jpg) no-repeat 50%;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+}
+.header h1 {
+	line-height: 80px;
+	font-size: 1.25rem;
+	color: #FFF;
+	text-shadow: 0 1px 0 #69A129;
+}
+.header h1 span {font-size: .875rem;}
+.header .arr {
+	width: 0;
+	height: 0;
+	font-size: 0;
+	border-width: 6px;
+	border-style: solid;
+	border-color:transparent transparent #FFF transparent;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -6px;
+}
+.faceHeader {height: 125px;}
+.faceHeader img {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	margin-top: 10px;
+}
+.faceHeader h1 {line-height: 50px;}
+
+.wrap {padding-bottom: 20px;}
+
+/************************************************************************** 登录 ***/
+.loginBox {padding: 20px 32px;}
+.loginBox .box {display: none;}
+.loginBox label {
+	background-color: #EEE;
+	border: 1px solid #DADADA;
+	border-left: 0;
+	border-radius: 0 5px 5px 0;
+	height: 30px;
+	line-height: 30px;
+	font-size: .875rem;
+	text-indent: 5px;
+	display: block;
+	margin-left: 10px;
+}
+.loginBox .d1 input, .loginBox .d3 input {
+	border-radius: 5px 0 0 5px;
+	width: 48%;
+	float: left;
+	margin: -1px 0 0 -10px;
+}
+.loginBox .d4 {height: 80px;}
+.loginBox .d3 a {color: #05A;}
+.loginBox dd {
+	height: 45px;
+	clear: both;
+}
+.loginBox .selbar {margin-bottom: 5px;}
+
+.loginBox .btn {width: 100%;}
+
+/************************************************************************** 核录学员 ***/
+.heluList li {border-bottom: 1px solid #DDD;}
+.heluList li a {
+	padding: 10px 15px;
+	height: 60px;
+	display: block;
+}
+.heluList img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 15px;
+	border-radius: 30px;
+}
+.heluList .b {
+	float: right;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	color: #FFF;
+	border-radius: 15px;
+	background-color: #66B840;
+	text-indent: 15px;
+	margin-top: 15px;
+	font-size: .75rem;
+	position: relative;
+}
+.heluList .b::before, .heluList .b::after {position: absolute;right: 5px;top: 50%;margin-top: -5px;content: "";font-size: 0;height: 0;width: 0;border-width: 5px;border-style: solid;border-color:transparent transparent transparent #FFF;}
+.heluList .b::after {right: 6px; border-color: transparent transparent transparent #66B840;}
+
+.heluList h3 {
+	padding-top: 10px;
+	font-size: 1rem;
+}
+.heluList p {
+	font-size: .715rem;
+	color: #999;
+}
+
+/* 学员信息 */
+.heluInfo .msg {
+	border: 1px solid #66B840;
+	border-radius: 5px;
+	margin: 10px 15px 0;
+	padding: 6px 10px;
+	font-size: .875rem;
+}
+.heluInfo .msg span {padding: 0 5px;}
+.heluInfo .button {margin: 10px 15px 0;}
+.heluInfo .btn {width: 100%;}
+
+/* 弹出层 */
+.popHelu {padding: 20px;}
+.popHelu p {margin: 10px 0 20px;}
+.popHelu .button {text-align: center;}
+.popHelu .btn {padding: 0 2em;}
+
+/************************************************************************** 我的学员 ***/
+.stuList .hd {
+	padding: 15px 0 0 15px;
+	line-height: 30px;
+	height: 30px;
+	color: #66B840;
+	border-bottom: 2px solid #66B840;
+}
+.stuList .hd .th {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+.stuList .tr {
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #DDD;
+	font-size: .875rem;
+	position: relative;
+}
+.stuList .tr a {
+	overflow: hidden;
+	padding-left: 15px;
+	display: block;
+}
+.stuList .tr::before, .stuList .tr::after {
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	margin-top: -8px;
+	content: "";
+	font-size: 0;
+	height: 0;
+	width: 0;
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent transparent transparent #dadada;
+}
+.stuList .tr:after {
+	right: 10px;
+	border-color: transparent transparent transparent #fff;
+}
+.stuList .td {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+.stuList .td:first-of-type {color: #FF8546;}
+.stuList .more {
+	color: #66B840;
+	line-height: 40px;
+	text-align: center;
+	background-image: -webkit-linear-gradient(top, #EEE, #FFF);
+	background-image: linear-gradient(to bottom, #EEE, #FFF);
+	background-color: #F5F5F5;
+}
+
+.stuList .loading {
+	height: 40px;
+	text-align: center;
+}
+.stuList .loading i {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-top: 12px;
+	background: url(../img/loading.png) no-repeat 50%;
+	background-size: 16px 16px;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 1s;
+	-webkit-animation: rotate 2s linear infinite;
+}
+
+.stuInfo .modCon a {margin-left: 10px;}
+
+/************************************************************************** 活动 ***/
+.newsList {margin-top: 15px;}
+.newsList li {
+	border-bottom: 1px solid #DDD;
+	position: relative;
+	font-size: .875rem;
+}
+.newsList li::before, .newsList li::after {
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	margin-top: -8px;
+	content: "";
+	font-size: 0;
+	height: 0;
+	width: 0;
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent transparent transparent #dadada;
+}
+.newsList li:after {
+	right: 10px;
+	border-color: transparent transparent transparent #fff;
+}
+.newsList li a {
+	display: block;
+	padding: 10px 15px;
+}
+.newsList li .tit {
+	width: 92%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.newsList li .time {
+	font-size: .715rem;
+	color: #999;
+}
+
+/************************************************************************** 上传照片 ***/
+.upPhoto dt {font-size: 1rem;}
+.upPhoto dd {height: 45px;clear: both;}
+.upPhoto .btn {width: 98%;}
+
+.photoList {font-size:.875rem;display:-webkit-box;display:-moz-box;-webkit-box-orient:horizontal;padding-bottom:10px;}
+.photoList li {-webkit-box-flex:1;-moz-box-flex:1;text-align:center;padding-right:5px;}
+.photoList img {width: 100%; height: auto;}
+.photoList a {display: block; color: #05A;}
+
+/************************************************************************** 周、月课表 ***/
+.courseHd {background-color: #EEE; height: 80px;}
+.courseHd .addCourse {
+	float: right;	
+	width: 25%;
+	height: 60px;
+	background-color: #FF8549;
+	border-bottom: 2px solid #CE6B3C;
+	border-radius: 5px 0 0 5px;
+	margin-top: 12px;
+}
+.courseHd .addCourse a {
+	display: block;
+	height: 100%;
+	line-height: 60px;
+	color: #FFF;
+	text-align: center;
+}
+.courseHd .selbar {
+	float: left;
+	width: 73%;
+	height: 60px;
+	background-color: #579D38;
+	border-bottom: 2px solid #467A2B;
+	border-radius: 0 5px 5px 0;
+	margin-top: 12px;
+}
+.courseHd .selbar::before, .courseHd .selbar::after {
+	right: 12px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: #FFF transparent transparent transparent;
+}
+.courseHd .selbar::after {margin-top: -3px;border-color: #579D38 transparent transparent transparent;}
+.courseHd select {
+	height: 60px;
+	padding: 0 0 18px 35px;
+	background: transparent;
+	box-shadow: none;
+	border: 0;
+	color: #FFF;
+	font-size: 1rem;
+}
+.courseHd .txt {
+	color: #AEE791;
+	font-size: .875rem;
+	position: absolute;
+	left: 35px;
+	top: 32px;
+}
+.courseHd .arr {
+	background-color: #FFF;
+	border-radius: 8px;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 13px;
+	left: 10px;
+}
+.courseHd .arr span {
+	background-color: #FFF;
+	width: 4px;
+	height: 40px;
+	position: absolute;
+	bottom: -39px;
+	left: 6px;
+}
+
+.courseList {
+	margin-left: 16px;
+	border-left: 4px solid #EEE;
+	padding-bottom: 1px;
+}
+.courseList ul {
+	margin-left: -10px;
+	padding: 15px 15px 0 0;
+}
+.courseList li {margin-bottom: 15px;}
+.courseList h4 {
+	color: #579D38;
+	position: relative;
+	margin-left: 26px;
+	border-bottom: 1px solid #EEE;
+}
+.courseList h4 i {
+	width: 16px;
+	height: 16px;
+	background-color: #579D38;
+	position: absolute;
+	z-index: 2;
+	left: -26px;
+	top: 2px;
+	border-radius: 8px;
+}
+.courseList h4 span {
+	z-index: 1;
+	position: absolute;
+	height: 1px;
+	background-color: #EEE;
+	width: 20px;
+	left: -18px;
+	bottom: 4px;
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+}
+.courseList .stu {
+	margin: 0 0 0 26px;
+	height: 50px;
+	border-bottom: 1px solid #EEE;
+}
+.courseList .stu .time {
+	font-size: .875rem;
+	width: 40%;
+	float: left;
+	padding-top: 8px;
+	line-height: 1.2em;
+}
+.courseList .stu .name {
+	color: #05A;
+	text-decoration: underline;
+	float: left;
+	line-height: 50px;
+	height: 50px;
+	width: 30%;
+	font-size: .875rem;
+	text-indent: .875em;
+	overflow: hidden;
+}
+.courseList .stu .b {
+	float: right;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	color: #FFF;
+	border-radius: 15px;
+	text-indent: 15px;
+	margin-top: 10px;
+	font-size: .75rem;
+	position: relative;
+}
+.courseList .stu .b::before, .courseList .stu .b::after {position: absolute;right: 5px;top: 50%;margin-top: -5px;content: "";font-size: 0;height: 0;width: 0;border-width: 5px;border-style: solid;border-color: transparent transparent transparent #FFF;}
+.courseList .stu .b::after {right: 6px; border-color: transparent transparent transparent #66B840;}
+
+.courseList .stu .b1 {background-color: #66B840;}
+.courseList .stu .b1::after {border-color: transparent transparent transparent #66B840;}
+.courseList .stu .b2 {background-color: #AEE791; color: #87CC55; text-align: center; text-indent: 0;}
+.courseList .stu .b2::before, .courseList .stu .b2::after {border: 0;}
+.courseList .stu .b3 {background-color: #389D9C;}
+.courseList .stu .b3::after {border-color: transparent transparent transparent #389D9C;}
+
+.courseList .stu.finish {
+	background: url(../img/wen.png);
+	background-size: 18px;
+	margin-bottom: 2px;
+}
+.courseList .stu.finish .time {color: #999;}
+/* 弹出层 */
+.popCourse {padding: 10px 20px 20px;}
+.popCourse ul {padding-top: 5px;}
+.popCourse li {padding: 5px 0 5px 70px; line-height: 30px;}
+.popCourse .alt {margin-left: -70px; float: left; font-size: .875rem;}
+.popCourse .selbar::before, .popCourse .selbar::after {right: 10px;}
+.popCourse .liLast .selbar {float: left; width: 40%;}
+.popCourse .liLast span {float: left; width: 18%; text-align: center; font-size: .875rem;}
+.popCourse .button {clear:both; padding: 10px 0 0 70px;}
+.popCourse .button .b1 {width: 58%;}
+.popCourse .button .b2 {color: #777; width: 38%; background-color: #D1D1D1; border-color:#777; }
+
+@-webkit-keyframes rotate{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}
+
