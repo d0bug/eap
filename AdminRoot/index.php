@@ -14,6 +14,8 @@ $includePath = dirname(APP_DIR) . '/include';
 define('LIBRARY_PATH',  APP_DIR . '/Library');
 define('THINK_MODE','PHPRPC');
 
+//add crlf
+//
 #兼容服务器上的nginx+fpm设置
 if (preg_match('/^\/index\.php$/', $_SERVER['PATH_INFO'])) {
 	$_SERVER['PATH_INFO'] = '';
